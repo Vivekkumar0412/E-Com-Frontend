@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { toast } from "sonner";
+import ProductGrid from "./ProductGrid";
 let selectedProduct = {
   name: "Stylish Jacket",
   price: 120,
@@ -19,17 +21,81 @@ let selectedProduct = {
     },
   ],
 };
+
+const similarProducts = [
+  {
+    _id: 1,
+    name: "Stylish Jacket",
+    price: 120,
+    images: [
+      {
+        url: "https://picsum.photos/500/500?random=1",
+        altText: "Jacket 1",
+      }
+    ],
+  },
+  {
+    _id: 2,
+    name: "Cargo",
+    price: 120,
+    images: [
+      {
+        url: "https://picsum.photos/500/500?random=2",
+        altText: "Jacket 1",
+      }
+    ],
+  },
+  {
+    _id: 3,
+    name: "Denim",
+    price: 120,
+    images: [
+      {
+        url: "https://picsum.photos/500/500?random=3",
+        altText: "Jacket 1",
+      }
+    ],
+  },
+  {
+    _id: 4,
+    name: "Bikini",
+    price: 120,
+    images: [
+      {
+        url: "https://picsum.photos/500/500?random=4",
+        altText: "Jacket 1",
+      }
+    ],
+  },
+];
 function ProductDetails() {
   const [mainImage, setMainImage] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
   let [selectedColor, setSelectedColor] = useState("");
   let [quantity, setQuantity] = useState(1);
-  let [isButtonDisables, setIsDisabled] = useState(false);
+  let [isButtonDisables, setIsButtonDisabled] = useState(false);
   useEffect(() => {
     if (selectedProduct.images.length > 0) {
       setMainImage(selectedProduct.images[0].url);
     }
   }, [selectedProduct]);
+
+  function handleAddtoCartFun() {
+    if (!selectedColor || !selectedSize) {
+      toast.error("Please Select the size and color", {
+        duration: 1000,
+      });
+      return;
+    }
+    setIsButtonDisabled(true);
+
+    setTimeout(() => {
+      toast.success("Product added to cart", {
+        duration: 1000,
+      });
+      setIsButtonDisabled(false);
+    }, 500);
+  }
   return (
     <div className="p-6">
       <div className="max-w-6xl mx-auto bg-white p-8 rounded-lg ">
@@ -134,8 +200,16 @@ function ProductDetails() {
                 </div>
               </div>
             </div>
-            <button className="text-white bg-black w-full rounded py-2 px-6 mb-4">
-              Add to Cart
+            <button
+              onClick={handleAddtoCartFun}
+              disabled={isButtonDisables}
+              className={`text-white bg-black w-full rounded py-2 px-6 mb-4 ${
+                isButtonDisables
+                  ? "cursor-not-allowed opacity-50"
+                  : "hover:bg-gray-900"
+              }`}
+            >
+              {isButtonDisables ? "Adding..." : "Add to Cart"}
             </button>
             <div className="mt-10 text-gray-700">
               <h3 className="text-xl mb-4 font-bold">Characteristcs :</h3>
@@ -153,6 +227,12 @@ function ProductDetails() {
               </table>
             </div>
           </div>
+        </div>
+        <div className="mt-20">
+          <h2 className="text-2xl text-center font-medium mb-4">
+            You may also Like
+          </h2>
+          <ProductGrid products={similarProducts} />
         </div>
       </div>
     </div>

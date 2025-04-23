@@ -11,14 +11,14 @@ function GenderCollectionSection() {
                 <img src={womensCollectionImg} alt="woment collection" className='h-[700px] w-full object-cover' />
                 <div className='absolute bottom-8 left-8 bg-white bg-opacity-90 p-4'>
                     <h2 className='text-2xl font-bold ay-900 mb-3'>Women's collection</h2>
-                    <Link to="collection/all/?gender=women" className='text-gray-900 underline'>Shop Now</Link>
+                    <Link to="collections/all/?gender=Women" className='text-gray-900 underline'>Shop Now</Link>
                 </div>
             </div>
             <div className='relative flex-1'>
                 <img src={mensCollectionImg} alt="men collection" className='h-[700px] w-full object-cover' />
                 <div className='absolute bottom-8 left-8 bg-white bg-opacity-90 p-4'>
                     <h2 className='text-2xl font-bold ay-900 mb-3'>Men's collection</h2>
-                    <Link to="collection/all/?gender=men" className='text-gray-900 underline'>Shop Now</Link>
+                    <Link to="collections/all/?gender=Men" className='text-gray-900 underline'>Shop Now</Link>
                 </div>
             </div>
         </div>

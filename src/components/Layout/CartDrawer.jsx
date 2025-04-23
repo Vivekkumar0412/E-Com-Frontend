@@ -22,7 +22,7 @@ function CartDrawer({toggleCartDrawer,cartDrawer}) {
       </div>
       <div className="bg-white sticky p-4 bottom-0">
         <button className="w-full bg-black text-white py-3 rounded-md font-semibold hover:bg-gray-800 transition">Checkout</button>
-        <p className="text-sm tracking-tighter text-gray-600 text-center mt-2">Shiping, Taxes and discount code at calculated at checkout</p>
+        <p className="text-sm tracking-tighter text-gray-600 text-center mt-2">Shiping, Taxes and discount code are calculated at checkout</p>
       </div>
     </div>
   );
