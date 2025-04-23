@@ -4,7 +4,7 @@ import womensCollectionImg from "../../assets/womens-collection.webp"
 import { Link } from 'react-router-dom'
 function GenderCollectionSection() {
   return (
-    <section className='py-16 py-4 lg:px-0'>
+    <section className='px-16 py-4 lg:px-0'>
         <div className='container mx-auto flex flex-col md:flex-row gap-8'>
             {/* womens collection */}
             <div className='relative flex-1'>
