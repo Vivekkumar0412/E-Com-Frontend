@@ -1,12 +1,11 @@
 import React from "react";
 import Hero from "../components/Layout/Hero";
 import GenderCollectionSection from "../components/Products/GenderCollectionSection";
-import NewArrivle from "../components/Products/NewArrivle";
 import ProductDetails from "../components/Products/ProductDetails";
 import ProductGrid from "../components/Products/ProductGrid";
 import FeaturedCollection from "../components/Products/FeaturedCollection";
 import FeaturesSection from "../components/Products/FeaturesSection";
-
+import NewArrivle from "../components/Products/NewArrivle"
 const placeHolderPoducts = [
   {
     _id: 1,
