@@ -102,7 +102,7 @@ function Home() {
     <>
       <Hero />
       <GenderCollectionSection />
-      <NewArrivle />
+      {/* <NewArrivle /> */}
       {/* Best seller section */}
       <h2 className="text-3xl text-center font-bol mb-4">Best Seller</h2>
       <ProductDetails />
