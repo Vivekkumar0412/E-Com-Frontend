@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../components/Layout/Hero";
 import GenderCollectionSection from "../components/Products/GenderCollectionSection";
-// import NewArrivle from "../components/Products/newArrivle";
+import NewArrivle from "../components/Products/NewArrivle";
 import ProductDetails from "../components/Products/ProductDetails";
 import ProductGrid from "../components/Products/ProductGrid";
 import FeaturedCollection from "../components/Products/FeaturedCollection";
@@ -102,7 +102,7 @@ function Home() {
     <>
       <Hero />
       <GenderCollectionSection />
-      {/* <NewArrivle /> */}
+      <NewArrivle />
       {/* Best seller section */}
       <h2 className="text-3xl text-center font-bol mb-4">Best Seller</h2>
       <ProductDetails />
