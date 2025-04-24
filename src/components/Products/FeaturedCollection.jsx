@@ -18,7 +18,7 @@ function FeaturedCollection() {
             dolores vitae voluptate, molestias sint hic eius illo minima
             asperiores optio?
           </p>
-          <Link to={"/collection/all"} className="bg-black text-white px-6 py-3 rounded-lg text-lg hover:bg-gray-800">
+          <Link to={"/collections/all"} className="bg-black text-white px-6 py-3 rounded-lg text-lg hover:bg-gray-800">
             Shop Now
           </Link>
         </div>
