@@ -31,25 +31,25 @@ function Navbar() {
 
         <div className="hidden md:flex space-x-6">
           <Link
-            to="collections/all"
+            to="collections/all/?gender=Men"
             className="text-gray-700 hover:text-black text-sm font-meduim uppercase"
           >
             Men
           </Link>
           <Link
-            to="#"
+            to="collections/all/?gender=Women"
             className="text-gray-700 hover:text-black text-sm font-meduim uppercase"
           >
             Women
           </Link>
           <Link
-            to="#"
+            to="collections/all"
             className="text-gray-700 hover:text-black text-sm font-meduim uppercase"
           >
             Top Wear
           </Link>
           <Link
-            to="#"
+            to="collections/all"
             className="text-gray-700 hover:text-black text-sm font-meduim uppercase"
           >
             Bottom Wear
@@ -57,6 +57,7 @@ function Navbar() {
         </div>
         {/* right */}
         <div className="flex items-center space-x-4">
+          <Link to="/admin" className="block bg-black px-2 rounded text-white text0-sm">Admin</Link>
           <Link to="/profile" className="hover:text-black">
             <HiOutlineUser className="h-6 w-6 text-gray-700" />
           </Link>
