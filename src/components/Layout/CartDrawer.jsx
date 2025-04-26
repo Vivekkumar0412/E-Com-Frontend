@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 function CartDrawer({toggleCartDrawer,cartDrawer}) {
   const navigate = useNavigate();
   function handleCheckOutFun(){
+    toggleCartDrawer()
     navigate("/checkout")
   }
   return (
