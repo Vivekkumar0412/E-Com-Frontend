@@ -8,6 +8,15 @@ import Profile from "./pages/Profile";
 import CollectionPage from "./pages/CollectionPage";
 import ProductDetails from "./components/Products/ProductDetails";
 import Checkout from "./components/Cart/Checkout";
+import OrderConfirmationPage from "./pages/OrderConfirmationPage";
+import OrderDetailspage from "./pages/OrderDetailspage";
+import MyOrderPage from "./pages/MyOrderPage";
+import AdminLayout from "./components/Admin/AdminLayout";
+import AdminHomePage from "./pages/AdminHomePage";
+import UserManagement from "./components/Admin/UserManagement";
+import ProductManagement from "./components/Admin/ProductManagement";
+import EditProductPage from "./components/Admin/EditProductPage";
+import OrderManagment from "./components/Admin/OrderManagment";
 function App() {
   return (
     <>
@@ -23,6 +32,16 @@ function App() {
             <Route path="collections/:collection" element={<CollectionPage/>} />
             <Route path="product/:id" element={<ProductDetails/>} />
             <Route path="/checkout" element={<Checkout/>}/>
+            <Route path="/order-confirmation" element={<OrderConfirmationPage/>}/>
+            <Route path="/order/:id/" element={<OrderDetailspage/>}/>
+            <Route path="/my-orders" element={<MyOrderPage/>}/>
+          </Route>
+          <Route path="/admin" element={<AdminLayout/>}>
+            <Route index element={<AdminHomePage/>}/>
+            <Route path="users" element={<UserManagement/>}/>
+            <Route path="products" element={<ProductManagement/>}/>
+            <Route path="products/:id/edit" element={<EditProductPage/>}/>
+            <Route path="orders" element={<OrderManagment/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
